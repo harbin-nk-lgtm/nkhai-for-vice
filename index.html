@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vote Nkhai for Vice President</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #000;
+      color: white;
+      font-family: "Poppins", sans-serif;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 70px 20px 50px;
+      background: linear-gradient(180deg, #111, #000);
+      border-bottom: 2px solid #333;
+    }
+
+    h1, h2, .name, .slogan {
+      font-family: "Pacifico", cursive;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 9vw, 7rem);
+      color: #ffd700;
+      text-shadow: 0 0 20px #ffd70066;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin: 15px auto;
+      max-width: 700px;
+      color: #ddd;
+    }
+
+    .slogan {
+      font-size: clamp(1.4rem, 4vw, 2.5rem);
+      color: #fff;
+      margin-top: 25px;
+    }
+
+    .vote-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 35px;
+      border: none;
+      border-radius: 50px;
+      background: #ffd700;
+      color: #000;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .vote-button:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 25px #ffd700;
+    }
+
+    section {
+      width: min(1100px, 92%);
+      margin: 60px auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #ffd700;
+      margin-bottom: 30px;
+    }
+
+    .reasons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .reason {
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 18px;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .reason-number {
+      font-size: 2rem;
+      color: #ffd700;
+      font-weight: bold;
+    }
+
+    .reason h3 {
+      margin: 10px 0;
+      color: white;
+    }
+
+    .reason p {
+      color: #bbb;
+      line-height: 1.6;
+    }
+
+    .candidate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .candidate {
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 18px;
+      padding: 22px;
+      text-align: center;
+      transition: .2s;
+    }
+
+    .candidate:hover {
+      transform: translateY(-5px);
+      border-color: #ffd700;
+    }
+
+    .candidate.nkhai {
+      border: 2px solid #ffd700;
+      background: linear-gradient(145deg, #191600, #111);
+    }
+
+    .name {
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    .role {
+      color: #999;
+      margin: 5px 0 15px;
+    }
+
+    .votes {
+      color: #ffd700;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .small-vote {
+      background: #ffd700;
+      color: #000;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .small-vote:hover {
+      background: white;
+    }
+
+    .message {
+      text-align: center;
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 20px;
+      padding: 35px;
+      margin-top: 50px;
+    }
+
+    .message p {
+      color: #ddd;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      color: #777;
+      border-top: 1px solid #222;
+    }
+
+    footer .slogan {
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Nkhai</h1>
+
+    <p class="subtitle">
+      Vote Nkhai for Vice President!
+    </p>
+
+    <div class="slogan">
+      "Believe in better, vote Nkhai"
+    </div>
+
+    <div class="slogan">
+      "Vote for Nkhai: your voice, your choice"
+    </div>
+
+    <button class="vote-button" onclick="vote('Nkhai')">
+      🗳️ VOTE FOR NKHAI
+    </button>
+  </header>
+
+  <section>
+    <h2 class="section-title">Why Vote For Nkhai?</h2>
+
+    <div class="reasons">
+
+      <div class="reason">
+        <div class="reason-number">1</div>
+        <h3>Very Smart</h3>
+        <p>
+          Nkhai is smart, determined, and ready to represent the people.
+        </p>
+      </div>
+
+      <div class="reason">
+        <div class="reason-number">2</div>
+        <h3>Great at Sports</h3>
+        <p>
+          Nkhai loves sports and can play soccer, basketball, and even football.
+        </p>
+      </div>
+
+      <div class="reason">
+        <div class="reason-number">3</div>
+        <h3>Chips!</h3>
+        <p>
+          Vote for Nkhai and he plans to give y'all chips! 🥔
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRESIDENT -->
+  <section>
+    <h2 class="section-title">President Candidates</h2>
+
+    <div class="candidate-grid">
+
+      <div class="candidate">
+        <div class="name">Erick</div>
+        <div class="role">President</div>
+        <div class="votes">
+          Votes: <span id="Erick-votes">0</span>
+        </div>
+        <button class="small-vote" onclick="vote('Erick')">
+          Vote
+        </button>
+      </div>
+
+      <div class="candidate">
+        <div class="name">Sarracha</div>
+        <div class="role">President</div>
+        <div class="votes">
+          Votes: <span id="Sarracha-votes">0</span>
+        </div>
+        <button class="small-vote" onclick="vote('Sarracha')">
+          Vote
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VICE PRESIDENT -->
+  <section>
+    <h2 class="section-title">Vice President</h2>
+
+    <div class="candidate-grid">
+
+      <div class="candidate nkhai">
+        <div class="name">Nkhai</div>
+        <div class="role">⭐ Vice President</div>
+
+        <div class="votes">
+          Votes: <span id="Nkhai-votes">0</span>
+        </div>
+
+        <button class="small-vote" onclick="vote('Nkhai')">
+          🗳️ Vote Nkhai
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SHERIFF -->
+  <section>
+    <h2 class="section-title">Sheriff Candidates</h2>
+
+    <div class="candidate-grid">
+
+      <div class="candidate"><div class="name">Axel.w</div><div class="role">Sheriff</div><div class="votes">Votes: <span id="Axel.w-votes">0</span></div><button class="small-vote" onclick="vote('Axel.w')">Vote</button></div>
+
+      <div class="candidate"><div class="name">Marquell</div><div class="role">Sheriff</div><div class="votes">Votes: <span id="Marquell-votes">0</span></div><button class="small-vote" onclick="vote('Marquell')">Vote</button></div>
+
+      <div class="candidate"><div class="name">Nathaniel</div><div class="role">Sheriff</div><div class="votes">Votes: <span id="Nathaniel-votes">0</span></div><button class="small-vote" onclick="vote('Nathaniel')">Vote</button></div>
+
+      <div class="candidate"><div class="name">Angel</div><div class="role">Sheriff</div><div class="votes">Votes: <span id="Angel-votes">0</span></div><button class="small-vote" onclick="vote('Angel')">Vote</button></div>
+
+      <div class="candidate"><div class="name">Dennis</div><div class="role">Sheriff</div><div class="votes">Votes: <span id="Dennis-votes">0</span></div><button class="small-vote" onclick="vote('Dennis')">Vote</button></div>
+
+      <div class="candidate"><div class="name">Jose</div><div class="role">Sheriff</div><div class="votes">Votes: <span id="Jose-votes">0</span></div><button class="small-vote" onclick="vote('Jose')">Vote</button></div>
+
+      <div class="candidate"><div class="name">Franclin</div><div class="role">Sheriff</div><div class="votes">Votes: <span id="Franclin-votes">0</span></div><button class="small-vote" onclick="vote('Franclin')">Vote</button></div>
+
+      <div class="candidate"><div class="name">Dylan.r</div><div class="role">Sheriff</div><div class="votes">Votes: <span id="Dylan.r-votes">0</span></div><button class="small-vote" onclick="vote('Dylan.r')">Vote</button></div>
+
+      <div class="candidate"><div class="name">Mayonaise</div><div class="role">Sheriff</div><div class="votes">Votes: <span id="Mayonaise-votes">0</span></div><button class="small-vote" onclick="vote('Mayonaise')">Vote</button></div>
+
+      <div class="candidate"><div class="name">Axel.v</div><div class="role">Sheriff</div><div class="votes">Votes: <span id="Axel.v-votes">0</span></div><button class="small-vote" onclick="vote('Axel.v')">Vote</button></div>
+
+    </div>
+  </section>
+
+  <!-- JUDGE -->
+  <section>
+    <h2 class="section-title">Judge Candidates</h2>
+
+    <div class="candidate-grid">
+
+      <div class="candidate"><div class="name">Victor</div><div class="role">Judge</div><div class="votes">Votes: <span id="Victor-votes">0</span></div><button class="small-vote" onclick="vote('Victor')">Vote</button></div>
+
+      <div class="candidate"><div class="name">Dylan.v</div><div class="role">Judge</div><div class="votes">Votes: <span id="Dylan.v-votes">0</span></div><button class="small-vote" onclick="vote('Dylan.v')">Vote</button></div>
+
+      <div class="candidate"><div class="name">Mecca</div><div class="role">Judge</div><div class="votes">Votes: <span id="Mecca-votes">0</span></div><button class="small-vote" onclick="vote('Mecca')">Vote</button></div>
+
+      <div class="candidate"><div class="name">Itzel</div><div class="role">Judge</div><div class="votes">Votes: <span id="Itzel-votes">0</span></div><button class="small-vote" onclick="vote('Itzel')">Vote</button></div>
+
+      <div class="candidate"><div class="name">Kevin</div><div class="role">Judge</div><div class="votes">Votes: <span id="Kevin-votes">0</span></div><button class="small-vote" onclick="vote('Kevin')">Vote</button></div>
+
+      <div class="candidate"><div class="name">Esmerlda</div><div class="role">Judge</div><div class="votes">Votes: <span id="Esmerlda-votes">0</span></div><button class="small-vote" onclick="vote('Esmerlda')">Vote</button></div>
+
+      <div class="candidate"><div class="name">Omar</div><div class="role">Judge</div><div class="votes">Votes: <span id="Omar-votes">0</span></div><button class="small-vote" onclick="vote('Omar')">Vote</button></div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="message">
+      <div class="slogan">Believe in better, vote Nkhai!</div>
+
+      <p>
+        Your voice matters. Your vote matters.
+        Make your choice count and support Nkhai for Vice President!
+      </p>
+
+      <button class="vote-button" onclick="vote('Nkhai')">
+        🗳️ VOTE NKHAI
+      </button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="slogan">Vote for Nkhai: your voice, your choice</div>
+    <p>Made for the Nkhai campaign 💛</p>
+  </footer>
+
+  <script>
+    const votes = {};
+
+    function vote(candidate) {
+      if (!votes[candidate]) {
+        votes[candidate] = 0;
+      }
+
+      votes[candidate]++;
+
+      const counter = document.getElementById(candidate + "-votes");
+
+      if (counter) {
+        counter.textContent = votes[candidate];
+      }
+
+      if (candidate === "Nkhai") {
+        alert("🗳️ Thank you for voting for Nkhai! Believe in better!");
+      } else {
+        alert("Your vote for " + candidate + " has been counted!");
+      }
+    }
+  </script>
+
+</body>
+</html>
